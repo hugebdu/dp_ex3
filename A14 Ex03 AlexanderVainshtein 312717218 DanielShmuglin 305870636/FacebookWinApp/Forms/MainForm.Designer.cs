@@ -130,6 +130,7 @@
             this.m_RefreshNewsFeedToolStripMenuItem.Name = "m_RefreshNewsFeedToolStripMenuItem";
             this.m_RefreshNewsFeedToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.m_RefreshNewsFeedToolStripMenuItem.Text = "Refresh News Feed";
+            this.m_RefreshNewsFeedToolStripMenuItem.Click += new System.EventHandler(this.m_RefreshNewsFeedToolStripMenuItem_Click);
             // 
             // optionsToolStripMenuItem
             // 

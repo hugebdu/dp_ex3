@@ -74,6 +74,7 @@
     <Compile Include="Translator\Bing\AdmAccessToken.cs" />
     <Compile Include="Translator\Bing\AdmAuthentication.cs" />
     <Compile Include="Translator\Bing\BingTranslator.cs" />
+    <Compile Include="Translator\CachedTranslator.cs" />
     <Compile Include="Translator\Dummy\DummyTranslator.cs" />
     <Compile Include="Translator\ITranslationResult.cs" />
     <Compile Include="Translator\ITranslator.cs" />

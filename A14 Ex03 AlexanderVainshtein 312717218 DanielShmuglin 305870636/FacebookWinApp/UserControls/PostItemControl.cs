@@ -20,8 +20,6 @@ namespace Ex2.FacebookApp.UserControls
 
         public ITranslatorHost TranslatorHost { get; set; }
 
-        private bool m_PostIsTranslated;
-
         private Post m_Post;
 
         public Post Post
@@ -36,7 +34,6 @@ namespace Ex2.FacebookApp.UserControls
                 if (m_Post != value)
                 {
                     m_Post = value;
-                    m_PostIsTranslated = false;
                     updateView();
                 }
             }
@@ -161,7 +158,7 @@ namespace Ex2.FacebookApp.UserControls
 
         private void m_TabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (m_PostIsTranslated || TranslatorHost == null || TranslatorHost.ActiveTranslator == null)
+            if (TranslatorHost == null || TranslatorHost.ActiveTranslator == null)
             {
                 return;
             }
@@ -169,7 +166,6 @@ namespace Ex2.FacebookApp.UserControls
             if (m_TabControl.SelectedTab == m_TranslatedTab)
             {
                 TranslatorHost.ActiveTranslator.AsyncTranslate(m_PostBody.Text, (result) => Utils.UpdateControlText(m_TranslatedPostBody, result.TranslatedOrOriginText));
-                m_PostIsTranslated = true;
             }
         }
 

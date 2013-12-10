@@ -14,9 +14,9 @@ namespace Ex2.FacebookApp.Model.Translator
                 case eTranslatorType.Dummy:
                     return new DummyTranslator();
                 case eTranslatorType.Bing:
-                    return new BingTranslator(i_TargetLanguageCode.ToString(), i_SkippedLanguageCodes == null ? null : i_SkippedLanguageCodes.Cast<string>());
+                    return new CachedTranslator(new BingTranslator(i_TargetLanguageCode.ToString(), i_SkippedLanguageCodes == null ? null : i_SkippedLanguageCodes.Cast<string>()));
                 case eTranslatorType.Base64:
-                    return new Base64Translator();
+                    return new CachedTranslator(new Base64Translator());
                 default:
                     throw new ArgumentException("Unsupported translator type");
             }
