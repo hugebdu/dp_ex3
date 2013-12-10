@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookWinApp", "FacebookWinApp\FacebookWinApp.csproj", "{4F3E17D4-4781-4FB3-8C95-F2E146BC22E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookApp.Model", "FacebookApp.Model\FacebookApp.Model.csproj", "{855B31CB-FF64-491C-BB81-E381A976B3C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{52449FCA-8E12-4A7C-AD5C-3074D339EE8C}"
+	ProjectSection(SolutionItems) = preProject
+		ex2.docx = ex2.docx
+		readme.txt = readme.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F3E17D4-4781-4FB3-8C95-F2E146BC22E4}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{4F3E17D4-4781-4FB3-8C95-F2E146BC22E4}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{4F3E17D4-4781-4FB3-8C95-F2E146BC22E4}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{4F3E17D4-4781-4FB3-8C95-F2E146BC22E4}.Debug|x86.ActiveCfg = Debug|x86
+		{4F3E17D4-4781-4FB3-8C95-F2E146BC22E4}.Debug|x86.Build.0 = Debug|x86
+		{4F3E17D4-4781-4FB3-8C95-F2E146BC22E4}.Release|Any CPU.ActiveCfg = Release|x86
+		{4F3E17D4-4781-4FB3-8C95-F2E146BC22E4}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{4F3E17D4-4781-4FB3-8C95-F2E146BC22E4}.Release|Mixed Platforms.Build.0 = Release|x86
+		{4F3E17D4-4781-4FB3-8C95-F2E146BC22E4}.Release|x86.ActiveCfg = Release|x86
+		{4F3E17D4-4781-4FB3-8C95-F2E146BC22E4}.Release|x86.Build.0 = Release|x86
+		{855B31CB-FF64-491C-BB81-E381A976B3C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{855B31CB-FF64-491C-BB81-E381A976B3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{855B31CB-FF64-491C-BB81-E381A976B3C6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{855B31CB-FF64-491C-BB81-E381A976B3C6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{855B31CB-FF64-491C-BB81-E381A976B3C6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{855B31CB-FF64-491C-BB81-E381A976B3C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{855B31CB-FF64-491C-BB81-E381A976B3C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{855B31CB-FF64-491C-BB81-E381A976B3C6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{855B31CB-FF64-491C-BB81-E381A976B3C6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{855B31CB-FF64-491C-BB81-E381A976B3C6}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

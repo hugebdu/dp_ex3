@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Ex2.FacebookApp.Model.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BingTranslateClientID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">dp_ex2</Value>
+    </Setting>
+    <Setting Name="BingTranslateSecretKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ubJB8b5HFVOgV8Z1i1xY4vKI7hd613JzBRWt9Ip0CNM=</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
