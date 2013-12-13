@@ -13,14 +13,12 @@ namespace Ex2.FacebookApp.Model.Translator
     public class BingTranslator : ITranslator, IDisposable
     {
         private readonly AdmAuthentication r_Authentication;
-        private HashSet<string> m_SkippedLanguageCodes;
         private string m_TargetLanguageCode;
 
         public LanguageServiceClient LanguageService { get; private set; }
 
-        public BingTranslator(string i_TargetLanguageCode, IEnumerable<string> i_SkippedLanguageCodes)
+        public BingTranslator(string i_TargetLanguageCode)
         {
-            m_SkippedLanguageCodes = new HashSet<string>(i_SkippedLanguageCodes ?? Enumerable.Empty<string>());
             m_TargetLanguageCode = i_TargetLanguageCode;
             r_Authentication = new AdmAuthentication(Settings.Default.BingTranslateClientID, Settings.Default.BingTranslateSecretKey);
             LanguageService = new LanguageServiceClient();
@@ -38,7 +36,7 @@ namespace Ex2.FacebookApp.Model.Translator
 
             var languageCode = detectLanguage(text);
             ITranslationResult result;
-            if (languageCode != m_TargetLanguageCode && !m_SkippedLanguageCodes.Contains(languageCode))
+            if (languageCode != m_TargetLanguageCode)
             {
                 var translated = invokeWithAuthentication(() => LanguageService.Translate(string.Empty, text, languageCode, m_TargetLanguageCode));
                 result = new TranslationResult(text, languageCode, true, translated);

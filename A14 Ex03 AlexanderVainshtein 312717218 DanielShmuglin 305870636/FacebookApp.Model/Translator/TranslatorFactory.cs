@@ -7,14 +7,14 @@ namespace Ex2.FacebookApp.Model.Translator
 
     public static class TranslatorFactory
     {
-        public static ITranslator Create(eTranslatorType i_Type, eTranslationLang i_TargetLanguageCode, IEnumerable<eTranslationLang> i_SkippedLanguageCodes = null)
+        public static ITranslator Create(eTranslatorType i_Type, eTranslationLang i_TargetLanguageCode)
         {
             switch (i_Type)
             {
                 case eTranslatorType.Dummy:
                     return new DummyTranslator();
                 case eTranslatorType.Bing:
-                    return new CachedTranslator(new BingTranslator(i_TargetLanguageCode.ToString(), i_SkippedLanguageCodes == null ? null : i_SkippedLanguageCodes.Cast<string>()));
+                    return new CachedTranslator(new BingTranslator(i_TargetLanguageCode.ToString()));
                 case eTranslatorType.Base64:
                     return new CachedTranslator(new Base64Translator());
                 default:
