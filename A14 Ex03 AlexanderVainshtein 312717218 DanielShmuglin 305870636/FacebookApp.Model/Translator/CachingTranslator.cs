@@ -2,17 +2,17 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Collections.Concurrent;
     using System.Linq;
     using System.Text;
     using System.Security.Cryptography;
 
-    public class CachedTranslator : ITranslator
+    public class CachingTranslator : ITranslator
     {
-        private readonly Dictionary<string, ITranslationResult> r_TranslationCache = new Dictionary<string, ITranslationResult>();
-        private readonly object r_CacheUpdateContext = new object();
+        private readonly ConcurrentDictionary<string, ITranslationResult> r_TranslationCache = new ConcurrentDictionary<string, ITranslationResult>();
         private ITranslator m_InnerTranslator;
 
-        public CachedTranslator(ITranslator i_BaseTranslator)
+        public CachingTranslator(ITranslator i_BaseTranslator)
         {
             m_InnerTranslator = i_BaseTranslator;
         }
@@ -31,13 +31,7 @@
                 {
                     if (!r_TranslationCache.ContainsKey(key))
                     {
-                        lock (r_CacheUpdateContext)
-                        {
-                            if (!r_TranslationCache.ContainsKey(key))
-                            {
-                                r_TranslationCache.Add(key, result);
-                            }
-                        }
+                        r_TranslationCache.TryAdd(key, result);
                     }
 
                     i_Callback(r_TranslationCache[key]);
