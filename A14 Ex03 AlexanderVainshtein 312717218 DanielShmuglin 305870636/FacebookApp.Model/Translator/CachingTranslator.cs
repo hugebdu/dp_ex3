@@ -10,7 +10,7 @@
     public class CachingTranslator : ITranslator
     {
         private readonly ConcurrentDictionary<string, ITranslationResult> r_TranslationCache = new ConcurrentDictionary<string, ITranslationResult>();
-        private HashAlgorithm r_Algorithm;
+        private readonly HashAlgorithm r_Algorithm;
         private ITranslator m_InnerTranslator;
 
         public CachingTranslator(ITranslator i_BaseTranslator)
