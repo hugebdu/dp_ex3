@@ -11,11 +11,11 @@
     {
         private readonly ConcurrentDictionary<string, ITranslationResult> r_TranslationCache = new ConcurrentDictionary<string, ITranslationResult>();
         private readonly HashAlgorithm r_Algorithm;
-        private ITranslator m_InnerTranslator;
+        private readonly ITranslator r_RealTranslator;
 
         public CachingTranslator(ITranslator i_BaseTranslator)
         {
-            m_InnerTranslator = i_BaseTranslator;
+            r_RealTranslator = i_BaseTranslator;
             r_Algorithm = createHashAlgorithm();
         }
 
@@ -27,7 +27,7 @@
                 i_Callback(r_TranslationCache[key]);
             }
 
-            m_InnerTranslator.AsyncTranslate(
+            r_RealTranslator.AsyncTranslate(
                 i_Text,
                 (result) =>
                 {
