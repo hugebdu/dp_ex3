@@ -10,11 +10,13 @@
     public class CachingTranslator : ITranslator
     {
         private readonly ConcurrentDictionary<string, ITranslationResult> r_TranslationCache = new ConcurrentDictionary<string, ITranslationResult>();
+        private HashAlgorithm r_Algorithm;
         private ITranslator m_InnerTranslator;
 
         public CachingTranslator(ITranslator i_BaseTranslator)
         {
             m_InnerTranslator = i_BaseTranslator;
+            r_Algorithm = createHashAlgorithm();
         }
 
         public void AsyncTranslate(string i_Text, OnCompleted i_Callback)
@@ -40,8 +42,7 @@
 
         private string getKey(string i_Text)
         {
-            var algorithm = getHashAlgorithm();
-            var hash = algorithm.ComputeHash(Encoding.UTF8.GetBytes(i_Text));
+            var hash = r_Algorithm.ComputeHash(Encoding.UTF8.GetBytes(i_Text));
             var stringBuilder = new StringBuilder();
             foreach (var oneByte in hash)
             {
@@ -51,7 +52,7 @@
             return stringBuilder.ToString();
         }
 
-        private HashAlgorithm getHashAlgorithm()
+        private HashAlgorithm createHashAlgorithm()
         {
             return MD5.Create();
         }
