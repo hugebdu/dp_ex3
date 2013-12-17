@@ -495,6 +495,9 @@
   <project key="-2016525785">
     <configuration>DEBUG;TRACE</configuration>
   </project>
+  <project key="-1676088347">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
   <sourcecode name="Program.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2013/09/19 15:09:50.000</styleCop>
@@ -712,7 +715,7 @@
     <timestamps>
       <styleCop>2013/09/19 15:09:50.000</styleCop>
       <settingsFile>2013/11/01 20:22:10.418</settingsFile>
-      <sourceFile>2013/11/17 20:54:04.721</sourceFile>
+      <sourceFile>2013/12/18 00:47:14.839</sourceFile>
       <parser>2013/09/19 15:09:50.000</parser>
       <StyleCop.CSharp.DocumentationRules>2013/09/19 15:09:50.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>-2064112440</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -735,7 +738,7 @@
     <timestamps>
       <styleCop>2013/09/19 15:09:50.000</styleCop>
       <settingsFile>2013/11/01 20:22:10.418</settingsFile>
-      <sourceFile>2013/11/16 22:49:00.875</sourceFile>
+      <sourceFile>2013/12/10 22:42:01.062</sourceFile>
       <parser>2013/09/19 15:09:50.000</parser>
       <StyleCop.CSharp.DocumentationRules>2013/09/19 15:09:50.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>-2064112440</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -868,7 +871,7 @@
     <timestamps>
       <styleCop>2013/09/19 15:09:50.000</styleCop>
       <settingsFile>2013/11/01 20:22:10.418</settingsFile>
-      <sourceFile>2013/11/17 20:54:16.364</sourceFile>
+      <sourceFile>2013/12/10 22:36:43.885</sourceFile>
       <parser>2013/09/19 15:09:50.000</parser>
       <StyleCop.CSharp.DocumentationRules>2013/09/19 15:09:50.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>-2064112440</StyleCop.CSharp.DocumentationRules.FilesHashCode>

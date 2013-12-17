@@ -261,6 +261,5 @@ namespace Ex2.FacebookApp
                 r_FeedRefreshTimer.Stop();
             }
         }
-
     }
 }
