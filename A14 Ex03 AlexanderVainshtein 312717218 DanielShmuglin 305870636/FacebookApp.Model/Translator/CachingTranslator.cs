@@ -25,6 +25,7 @@
             if (r_TranslationCache.ContainsKey(key))
             {
                 i_Callback(r_TranslationCache[key]);
+                return;
             }
 
             r_RealTranslator.AsyncTranslate(
